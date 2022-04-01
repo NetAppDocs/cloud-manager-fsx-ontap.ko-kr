@@ -1,0 +1,21 @@
+---
+permalink: legal-notices.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 법적 고지
+:icons: font
+:imagesdir: ../media/
+
+
+link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-legal-notices.adoc[""]
+
+link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[""]
+
+* link:media/notice_cloud_manager_3.9.pdf["Cloud Manager 3.9에 대한 고지 사항"^]
+* link:media/notice_cloud_backup_service.pdf["Cloud Backup에 대한 알림"^]
+* link:media/notice_cloud_sync.pdf["Cloud Sync에 대한 고지 사항"^]
+* link:media/notice_cloud_tiering.pdf["Cloud Tiering에 관한 고지 사항"^]
+* link:media/notice_cloud_data_sense.pdf["클라우드 데이터 센스에 대한 고지 사항"^]
+

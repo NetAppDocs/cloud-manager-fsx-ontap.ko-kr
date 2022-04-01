@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: use/task-manage-fsx-volumes.html 
+keywords: fsx for ontap, fsx, aws, delete volumes, delete nfs volumes, delete cifs volumes, tiering policy, mount path, get mount path, mount volume, delete volumes, snapshots, edit volume, clone volume, clone 
+summary: Cloud Manager를 사용하여 볼륨, 클론, 스냅샷을 관리하고 ONTAP용 FSx의 계층화 정책을 변경할 수 있습니다. 
+---
+= ONTAP용 Amazon FSx의 볼륨을 관리합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cloud Manager를 사용하여 볼륨, 클론, 스냅샷을 관리하고 ONTAP용 FSx의 계층화 정책을 변경할 수 있습니다.
+
+
+
+== 볼륨을 편집합니다
+
+볼륨을 생성한 후에는 언제든지 수정할 수 있습니다.
+
+.단계
+. 작업 환경을 엽니다.
+. 볼륨 메뉴를 열고 * 편집 * 을 선택합니다.
++
+.. NFS의 경우 크기와 태그를 수정할 수 있습니다.
+.. CIFS의 경우 필요에 따라 공유 이름, 사용자, 권한 및 스냅샷 정책을 수정할 수 있습니다.
+
+
+. 적용 * 을 클릭합니다.
+
+
+
+
+== 클론 볼륨
+
+볼륨을 생성한 후 새 스냅샷으로부터 새 읽기-쓰기 볼륨을 생성할 수 있습니다.
+
+.단계
+. 작업 환경을 엽니다.
+. 볼륨 메뉴를 열고 * 클론 * 을 선택합니다.
+. 복제된 볼륨의 이름을 입력합니다.
+. 클론 * 을 클릭합니다.
+
+
+
+
+== 스냅샷 복사본을 관리합니다
+
+Snapshot 복사본은 볼륨의 시점 복사본을 제공합니다. 스냅샷 복사본을 생성하고 데이터를 새 볼륨으로 복원합니다.
+
+.단계
+. 작업 환경을 엽니다.
+. 볼륨 메뉴를 열고 사용 가능한 옵션 중 하나를 선택하여 스냅샷 복사본을 관리합니다.
++
+** * 스냅샷 복사본 생성 *
+** * 스냅샷 복사본에서 복원 *
+
+
+. 프롬프트에 따라 선택한 작업을 완료합니다.
+
+
+
+
+== 계층화 정책을 변경합니다
+
+볼륨에 대한 계층화 정책을 변경합니다.
+
+.단계
+. 작업 환경을 엽니다.
+. 볼륨 메뉴를 열고 * 계층화 정책 변경 * 을 선택합니다.
+. 새 볼륨 계층화 정책을 선택하고 * Change * 를 클릭합니다.
+
+
+
+
+== 데이터 복제 및 동기화
+
+Cloud Manager를 사용하여 스토리지 환경 간에 데이터를 복제할 수 있습니다. ONTAP 복제에 대해 FSx를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-replication/https://docs.netapp.com/us-en/occm/task-replicating-data.html["시스템 간 데이터 복제"^].
+
+Cloud Manager에서 Cloud Sync를 사용하여 동기화 관계를 생성할 수 있습니다. 동기화 관계를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-sync/https://docs.netapp.com/us-en/occm/task-sync-quick-start.html["동기화 관계를 생성합니다"^].
+
+
+
+== 볼륨을 삭제합니다
+
+더 이상 필요하지 않은 볼륨을 삭제합니다.
+
+Cloud Manager를 사용하여 SnapMirror 관계의 이전 부분이었던 볼륨을 삭제할 수 없습니다. SnapMirror 볼륨은 AWS 관리 콘솔 또는 CLI를 사용하여 삭제해야 합니다.
+
+.단계
+. 작업 환경을 엽니다.
+. 볼륨 메뉴를 열고 * 삭제 * 를 선택합니다.
+. 작업 환경 이름을 입력하고 볼륨 삭제를 확인합니다. Cloud Manager에서 볼륨이 완전히 제거되기까지 최대 1시간이 걸릴 수 있습니다.
+
+
+
+NOTE: 복제된 볼륨을 삭제하려고 하면 오류가 발생합니다.

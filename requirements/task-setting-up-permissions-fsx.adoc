@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: requirements/task-setting-up-permissions-fsx.html 
+keywords: fsx for ontap, iam, user role, permissions 
+summary: ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려면 ONTAP용 FSx 권한이 있는 IAM 사용자 역할에 대한 AWS 액세스 키 및 암호 키가 있어야 합니다. 
+---
+= ONTAP용 FSx에 대한 권한을 설정합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려면 Cloud Manager에 ONTAP 작업 환경을 위한 FSx를 생성하는 데 필요한 권한을 제공하는 IAM 역할의 ARN을 제공하여 AWS 자격 증명을 Cloud Manager에 추가해야 합니다.
+
+
+
+== IAM 역할을 설정합니다
+
+Cloud Manager SaaS가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.
+
+.단계
+. 대상 계정에서 IAM 콘솔로 이동합니다.
+. 액세스 관리에서 * 역할 > 역할 만들기 * 를 클릭하고 단계를 따라 역할을 만듭니다.
++
+다음을 수행하십시오.
+
++
+** 신뢰할 수 있는 엔터티 유형 * 에서 * AWS 계정 * 을 선택합니다.
+** 다른 AWS 계정 * 을 선택하고 Cloud Manager SaaS:952013314444의 ID를 입력합니다
+** 다음 권한이 포함된 정책을 만듭니다.
++
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "fsx:*",
+                "ec2:Describe*",
+                "ec2:CreateTags",
+                "kms:Describe*",
+                "kms:List*",
+                "iam:CreateServiceLinkedRole"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+----
+
+
+. 다음 단계에서 Cloud Manager에 붙여넣을 수 있도록 IAM 역할의 역할 ARN을 복사합니다.
+
+
+이제 IAM 역할에 필요한 권한이 있습니다.
+
+
+
+== 자격 증명을 추가합니다
+
+필요한 권한을 IAM 역할에 제공한 후 ARN 역할을 Cloud Manager에 추가합니다.
+
+방금 IAM 역할을 생성한 경우 사용할 수 있을 때까지 몇 분 정도 걸릴 수 있습니다. 몇 분 후에 Cloud Manager에 자격 증명을 추가합니다.
+
+.단계
+. Cloud Manager 콘솔의 오른쪽 위에서 설정 아이콘을 클릭하고 * 자격 증명 * 을 선택합니다.
++
+image:screenshot_settings_icon.gif["Cloud Manager 콘솔의 오른쪽 위에 설정 아이콘이 표시된 스크린샷"]
+
+. 자격 증명 추가 * 를 클릭하고 마법사의 단계를 따릅니다.
++
+.. * 자격 증명 위치 *: * Amazon Web Services > Cloud Manager * 를 선택합니다.
+.. * 자격 증명 정의 *: IAM 역할의 ARN(Amazon Resource Name)을 제공합니다.
+.. * 검토 *: 새 자격 증명에 대한 세부 정보를 확인하고 * 추가 * 를 클릭합니다.
+
+
+
+
+이제 ONTAP 작업 환경에 대한 FSx를 생성할 때 자격 증명을 사용할 수 있습니다.
+
+
+
+== 관련 링크
+
+* https://docs.netapp.com/us-en/cloud-manager-get-started/concept-accounts-aws.html["AWS 자격 증명 및 권한"^]
+* https://docs.netapp.com/us-en/cloud-manager-get-started/task-adding-aws-accounts.html["Cloud Manager의 AWS 자격 증명 관리"^]
+

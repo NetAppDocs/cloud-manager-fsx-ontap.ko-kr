@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: use/task-creating-fsx-working-environment.html 
+keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment 
+summary: Cloud Manager를 사용하면 ONTAP 작업 환경을 위한 FSx를 생성하여 볼륨을 추가하고 추가 데이터 서비스를 관리할 수 있습니다. 
+---
+= ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cloud Manager를 사용하면 ONTAP 작업 환경의 FSx를 생성하고 관리하여 볼륨 및 추가 데이터 서비스를 추가하고 관리할 수 있습니다.
+
+
+
+== ONTAP 작업 환경을 위한 Amazon FSx를 생성합니다
+
+첫 번째 단계는 ONTAP 작업 환경에 대한 FSx를 생성하는 것입니다. AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 이미 생성한 경우 를 사용할 수 있습니다 link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system["Cloud Manager를 사용하여 IT에 대해 알아보십시오"].
+
+Cloud Manager에서 ONTAP 작업 환경을 위한 FSx를 생성하기 전에 다음이 필요합니다.
+
+* ONTAP 작업 환경을 위한 FSx를 생성하는 데 필요한 권한을 클라우드 관리자에게 제공하는 IAM 역할의 ARN 을 참조하십시오 link:task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
+* ONTAP용 FSx 인스턴스를 생성할 지역 및 VPN 정보
+
+
+.단계
+. Cloud Manager에서 새 작업 환경을 추가하고 * Amazon Web Services * 위치를 선택한 후 * 다음 * 을 클릭합니다.
+. ONTAP * 용 * 아마존 FSx 를 선택하고 * 다음 * 을 클릭합니다.
++
+image:screenshot_add_fsx_working_env.png["ONTAP용 Amazon FSx의 작업 환경을 추가하는 스크린샷"]
+
+. Cloud Manager에서 ONTAP에 대한 FSx를 인증합니다.
++
+.. 계정에 ONTAP용 FSx에 대한 올바른 AWS 권한이 있는 기존 IAM 역할이 있는 경우 드롭다운에서 해당 역할을 선택합니다.
++
+image:screenshot-fsx-assume-role-present.png["AWS 역할 드롭다운을 보여 주는 스크린샷"]
+
+.. 계정에 IAM 역할이 없는 경우 * 자격 증명 페이지 * 를 클릭하고 마법사의 단계에 따라 ONTAP 자격 증명을 위한 FSx를 사용하여 AWS IAM 역할에 대한 ARN을 추가합니다. 을 참조하십시오 link:task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
++
+image:screenshot-fsx-assume-role-not-present.png["ONTAP용 FSx 권한이 있는 AWS IAM 역할의 ARN을 추가하는 단계의 스크린샷"]
+
+
+
+. ONTAP용 FSx 인스턴스에 대한 정보를 제공합니다.
++
+.. 사용할 작업 환경 이름을 입력합니다.
+.. 또는 더하기 기호를 클릭하고 태그 이름과 값을 입력하여 태그를 만들 수도 있습니다.
+.. 사용할 ONTAP 클러스터 암호를 입력하고 확인합니다.
+.. SVM 사용자에 대해 동일한 암호를 사용하거나 다른 암호를 설정하는 옵션을 선택합니다.
+.. 다음 * 을 클릭합니다.
++
+image:screenshot_add_fsx_credentials.png["ONTAP용 FSx에 대한 자격 증명을 추가하는 스크린샷"]
+
+
+
+. 지역 및 VPC 정보 제공:
++
+.. 각 노드가 전용 가용성 영역에 있도록 적어도 두 개의 가용성 영역에 서브넷이 있는 영역 및 VPC를 선택합니다.
+.. 기본 보안 그룹을 수락하거나 다른 보안 그룹을 선택합니다. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["AWS 보안 그룹"^] 인바운드 및 아웃바운드 트래픽을 제어합니다. 이러한 항목은 AWS 관리자가 구성하며 에 연결됩니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["AWS의 탄력적인 네트워크 인터페이스(ENI)"^].
+.. 각 노드에 대한 가용성 영역 및 서브넷을 선택합니다.
+.. 다음 * 을 클릭합니다.
++
+image:screenshot_add_fsx_region.png["ONTAP용 FSx에 대한 영역 및 VPC 추가 스크린샷"]
+
+
+
+. CIDR Range_Empty를 그대로 두고 * Next * 를 클릭하여 사용 가능한 범위를 자동으로 설정합니다. 선택적으로 를 사용할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html["AWS Transit Gateway를 참조하십시오"^] 범위를 수동으로 구성합니다.
++
+image:screenshot_add_fsx_floatingIP.png["ONTAP용 FSx에 대한 영역 및 VPC 추가 스크린샷"]
+
+. 부동 IP 주소에 대한 라우트가 포함된 라우팅 테이블을 선택합니다. VPC(기본 경로 테이블)에 있는 서브넷에 대한 경로 테이블이 하나만 있는 경우 Cloud Manager는 해당 경로 테이블에 부동 IP 주소를 자동으로 추가합니다. 계속하려면 * 다음 * 을 클릭합니다.
++
+image:screenshot_add_fsx_route_table.png["ONTAP용 FSx에 대한 라우트 테이블 선택 스크린샷"]
+
+. 기본 AWS 마스터 키를 수락하거나 * 키 변경 * 을 클릭하여 다른 AWS CMK(Customer Master Key)를 선택합니다. CMK에 대한 자세한 내용은 을 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html["AWS KMS 설정"^]. 계속하려면 * 다음 * 을 클릭합니다.
++
+image:screenshot_add_fsx_encryption.png["ONTAP용 FSx의 기본 마스터 키를 설정하는 스크린샷"]
+
+. 스토리지 구성:
++
+.. 처리량, 용량 및 단위를 선택합니다.
+.. 선택적으로 IOPS 값을 지정할 수 있습니다. IOPS 값을 지정하지 않으면 Cloud Manager가 입력된 총 용량의 GiB당 3 IOPS를 기준으로 기본값을 설정합니다. 예를 들어, 총 용량에 대해 2000GiB를 입력하고 IOPS 값이 없으면 유효 IOPS 값은 6000으로 설정됩니다.
++
+
+WARNING: 최소 요구 사항을 충족하지 않는 IOPS 값을 지정하면 작업 환경을 추가할 때 오류가 발생합니다.image:screenshot_fsx_working_environment_failed_iops.png["잘못된 IOPS 값이 설정된 경우 오류 메시지의 스크린샷"]
+
+.. 다음 * 을 클릭합니다.image:screenshot_add_fsx_storage_config.png["ONTAP용 FSx에 대한 저장소 구성 설정 스크린샷"]
+
+
+. 구성을 검토합니다.
++
+.. 탭을 클릭하여 ONTAP 속성, 공급자 속성 및 네트워킹 구성을 검토합니다.
+.. 설정을 변경하려면 * Previous * (이전 *)를 클릭합니다.
+.. 설정을 적용하고 작업 환경을 만들려면 * 추가 * 를 클릭합니다.
++
+image:screenshot_add_fsx_review.png["ONTAP용 FSx 설정을 검토하는 스크린샷"]
+
+
+
+
+
+클라우드 관리자는 Canvas 페이지에 ONTAP용 FSx 구성을 표시합니다.
+
+image:screenshot_add_fsx_cloud.png["작업 환경 페이지의 ONTAP용 Amazon FSx 스크린샷"]
+
+이제 Cloud Manager를 사용하여 ONTAP 작업 환경의 FSx에 볼륨을 추가할 수 있습니다.
+
+
+
+== ONTAP 파일 시스템용 기존 FSx를 검색합니다
+
+AWS 관리 콘솔을 사용하여 ONTAP용 FSx 파일 시스템을 생성했거나 이전에 제거한 작업 환경을 복구하려는 경우 Cloud Manager를 사용하여 검색할 수 있습니다.
+
+.단계
+. Cloud Manager에서 * 작업 환경 추가 * 를 클릭하고 * Amazon Web Services * 를 선택합니다.
+. ONTAP * 용 * 아마존 FSx 를 선택하고 * 여기를 클릭 * 을 클릭합니다.
++
+image:screenshot_fsx_working_environment_discover.png["ONTAP용 Amazon FSx의 작업 환경을 발견한 스크린샷"]
+
+. 기존 자격 증명을 선택하거나 새 자격 증명을 생성합니다. 다음 * 을 클릭합니다.
+. 추가할 AWS 지역과 작업 환경을 선택합니다.
++
+image:screenshot_fsx_working_environment_select.png["AWS 지역 및 작업 환경 선택 스크린샷"]
+
+. 추가 * 를 클릭합니다.
+
+
+ONTAP 파일 시스템에 대해 검색된 FSx가 클라우드 관리자에 표시됩니다.
+
+
+
+== 작업 영역에서 ONTAP용 FSx를 제거합니다
+
+ONTAP 계정 또는 볼륨에 대한 FSx를 삭제하지 않고 Cloud Manager에서 ONTAP용 FSx를 제거할 수 있습니다. ONTAP 작업 환경용 FSx를 언제든지 Cloud Manager에 다시 추가할 수 있습니다.
+
+.단계
+. 작업 환경을 엽니다. AWS에 커넥터가 없는 경우 프롬프트 화면이 표시됩니다. 이 문제를 무시하고 작업 환경 제거를 계속할 수 있습니다.
+. 페이지 오른쪽 상단에서 작업 메뉴를 선택하고 * 작업 영역에서 제거 * 를 클릭합니다.
++
+image:screenshot_fsx_working_environment_remove.png["클라우드 관리자 인터페이스에서 ONTAP용 FSx에 대한 제거 옵션 스크린샷"]
+
+. Cloud Manager에서 ONTAP용 FSx를 제거하려면 * 제거 * 를 클릭합니다.
+
+
+
+
+== ONTAP 작업 환경의 FSx를 삭제합니다
+
+Cloud Manager에서 ONTAP용 FSx를 삭제할 수 있습니다.
+
+.시작하기 전에
+* 반드시 해야 합니다 link:task-manage-fsx-volumes.html#delete-volumes["모든 볼륨을 삭제합니다"] 파일 시스템과 연결되어 있습니다.
+
+
+
+NOTE: 볼륨을 제거 또는 삭제하려면 AWS의 활성 커넥터가 필요합니다.
+
+* 오류가 발생한 볼륨이 있는 작업 환경은 삭제할 수 없습니다. ONTAP 파일 시스템용 FSx를 삭제하기 전에 AWS 관리 콘솔 또는 CLI를 사용하여 실패한 볼륨을 삭제해야 합니다.
+
+
+
+WARNING: 이 작업을 수행하면 작업 환경과 관련된 모든 리소스가 삭제됩니다. 이 작업은 실행 취소할 수 없습니다.
+
+.단계
+. 작업 환경을 엽니다. AWS에 커넥터가 없는 경우 프롬프트 화면이 표시됩니다. 이 작업을 무시하고 작업 환경 삭제를 계속할 수 있습니다.
+. 페이지 오른쪽 상단에서 작업 메뉴를 선택하고 * 삭제 * 를 클릭합니다.
++
+image:screenshot_fsx_working_environment_delete.png["클라우드 관리자 인터페이스에서 ONTAP용 FSx에 대한 삭제 옵션 스크린샷"]
+
+. 작업 환경의 이름을 입력하고 * 삭제 * 를 클릭합니다.
+
