@@ -88,6 +88,6 @@ image:screenshot_settings_icon.gif["Cloud Manager 콘솔의 오른쪽 위에 설
 
 == 관련 링크
 
-* https://docs.netapp.com/us-en/cloud-manager-get-started/concept-accounts-aws.html["AWS 자격 증명 및 권한"^]
-* https://docs.netapp.com/us-en/cloud-manager-get-started/task-adding-aws-accounts.html["Cloud Manager의 AWS 자격 증명 관리"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html["AWS 자격 증명 및 권한"^]
+* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html["Cloud Manager의 AWS 자격 증명 관리"^]
 
