@@ -25,7 +25,7 @@ ONTAP용 Amazon FSx의 새로운 기능에 대해 알아보십시오.
 
 ONTAP 작업 환경을 위한 FSx를 생성할 때 이제 Cloud Manager가 ONTAP 작업 환경을 위한 FSx를 생성할 것으로 가정할 수 있는 IAM 역할의 ARN을 제공해야 합니다. 이전에는 AWS 액세스 키를 제공해야 했습니다.
 
-link:/task/task-setting-up-permissions-fsx.html["ONTAP용 FSx에 대한 사용 권한을 설정하는 방법에 대해 알아봅니다"].
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["ONTAP용 FSx에 대한 사용 권한을 설정하는 방법에 대해 알아봅니다"].
 
 
 
@@ -41,7 +41,7 @@ ONTAP용 FSx용 iSCSI 볼륨은 Cloud Manager API를 사용하여 생성하고 �
 
 === 볼륨을 생성할 때 볼륨 단위를 선택합니다
 
-가능합니다 link:/task/task-add-fsx-volumes.html#creating-volumes["볼륨을 생성할 때 볼륨 단위(GiB 또는 TiB)를 선택합니다"] FSx for ONTAP에서
+가능합니다 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["볼륨을 생성할 때 볼륨 단위(GiB 또는 TiB)를 선택합니다"] FSx for ONTAP에서
 
 
 
@@ -51,13 +51,13 @@ ONTAP용 FSx용 iSCSI 볼륨은 Cloud Manager API를 사용하여 생성하고 �
 
 === Cloud Manager를 사용하여 CIFS 볼륨을 생성합니다
 
-이제 가능합니다 link:/task/task-add-fsx-volumes.html#creating-volumes["Cloud Manager를 사용하여 ONTAP용 FSx에서 CIFS 볼륨을 생성합니다"].
+이제 가능합니다 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes["Cloud Manager를 사용하여 ONTAP용 FSx에서 CIFS 볼륨을 생성합니다"].
 
 
 
 === Cloud Manager를 사용하여 볼륨을 편집합니다
 
-이제 가능합니다 link:/task/task-manage-fsx-volumes.html#editing-volumes["Cloud Manager를 사용하여 ONTAP 볼륨의 FSx를 편집합니다"].
+이제 가능합니다 link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#editing-volumes["Cloud Manager를 사용하여 ONTAP 볼륨의 FSx를 편집합니다"].
 
 
 
@@ -69,14 +69,14 @@ ONTAP용 FSx용 iSCSI 볼륨은 Cloud Manager API를 사용하여 생성하고 �
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["ONTAP용 Amazon FSx"] 는 고객이 NetApp의 ONTAP 스토리지 운영 체제가 제공하는 파일 시스템을 실행하고 실행할 수 있도록 하는 완전 관리형 서비스입니다. ONTAP용 FSX는 NetApp 고객이 사내에서 사용하는 것과 동일한 기능, 성능 및 관리 기능을 기본 AWS 서비스의 단순성, 민첩성, 보안 및 확장성으로 제공합니다.
 +
-link:concept-fsx-aws.html["ONTAP용 Amazon FSx에 대해 자세히 알아보십시오"].
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/start/concept-fsx-aws.html["ONTAP용 Amazon FSx에 대해 자세히 알아보십시오"].
 
 * Cloud Manager에서 ONTAP 작업 환경에 대한 FSx를 구성할 수 있습니다.
 +
-link:/task/task-creating-fsx-working-environment.html["ONTAP 작업 환경을 위한 Amazon FSx를 생성합니다"].
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html["ONTAP 작업 환경을 위한 Amazon FSx를 생성합니다"].
 
 * AWS 및 Cloud Manager의 커넥터를 사용하여 볼륨을 생성 및 관리하고, 데이터를 복제하고, ONTAP용 FSx를 데이터 센스 및 Cloud Sync와 같은 NetApp 클라우드 서비스와 통합할 수 있습니다.
 +
-link:task-scanning-fsx.html#quick-start["ONTAP용 Amazon FSx에 대한 클라우드 데이터 센스를 시작해 보십시오"].
+link:https://docs.netapp.com/us-en/cloud-manager-data-sense/task-scanning-fsx.html["ONTAP용 Amazon FSx에 대한 클라우드 데이터 센스를 시작해 보십시오"^].
 
 

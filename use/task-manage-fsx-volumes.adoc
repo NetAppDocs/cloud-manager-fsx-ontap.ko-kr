@@ -78,9 +78,9 @@ Snapshot 복사본은 볼륨의 시점 복사본을 제공합니다. 스냅샷 �
 
 == 데이터 복제 및 동기화
 
-Cloud Manager를 사용하여 스토리지 환경 간에 데이터를 복제할 수 있습니다. ONTAP 복제에 대해 FSx를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-replication/https://docs.netapp.com/us-en/occm/task-replicating-data.html["시스템 간 데이터 복제"^].
+Cloud Manager를 사용하여 스토리지 환경 간에 데이터를 복제할 수 있습니다. ONTAP 복제에 대해 FSx를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["시스템 간 데이터 복제"^].
 
-Cloud Manager에서 Cloud Sync를 사용하여 동기화 관계를 생성할 수 있습니다. 동기화 관계를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-sync/https://docs.netapp.com/us-en/occm/task-sync-quick-start.html["동기화 관계를 생성합니다"^].
+Cloud Manager에서 Cloud Sync를 사용하여 동기화 관계를 생성할 수 있습니다. 동기화 관계를 구성하려면 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html["동기화 관계를 생성합니다"^].
 
 
 

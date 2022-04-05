@@ -23,7 +23,7 @@ Cloud Manager를 사용하면 ONTAP 작업 환경의 FSx를 생성하고 관리�
 
 Cloud Manager에서 ONTAP 작업 환경을 위한 FSx를 생성하기 전에 다음이 필요합니다.
 
-* ONTAP 작업 환경을 위한 FSx를 생성하는 데 필요한 권한을 클라우드 관리자에게 제공하는 IAM 역할의 ARN 을 참조하십시오 link:task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
+* ONTAP 작업 환경을 위한 FSx를 생성하는 데 필요한 권한을 클라우드 관리자에게 제공하는 IAM 역할의 ARN 을 참조하십시오 link:../requirements/task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
 * ONTAP용 FSx 인스턴스를 생성할 지역 및 VPN 정보
 
 
@@ -39,7 +39,7 @@ image:screenshot_add_fsx_working_env.png["ONTAP용 Amazon FSx의 작업 환경�
 +
 image:screenshot-fsx-assume-role-present.png["AWS 역할 드롭다운을 보여 주는 스크린샷"]
 
-.. 계정에 IAM 역할이 없는 경우 * 자격 증명 페이지 * 를 클릭하고 마법사의 단계에 따라 ONTAP 자격 증명을 위한 FSx를 사용하여 AWS IAM 역할에 대한 ARN을 추가합니다. 을 참조하십시오 link:task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
+.. 계정에 IAM 역할이 없는 경우 * 자격 증명 페이지 * 를 클릭하고 마법사의 단계에 따라 ONTAP 자격 증명을 위한 FSx를 사용하여 AWS IAM 역할에 대한 ARN을 추가합니다. 을 참조하십시오 link:../requirements/task-setting-up-permissions-fsx.html["Cloud Manager에 AWS 자격 증명 추가"] 를 참조하십시오.
 +
 image:screenshot-fsx-assume-role-not-present.png["ONTAP용 FSx 권한이 있는 AWS IAM 역할의 ARN을 추가하는 단계의 스크린샷"]
 
