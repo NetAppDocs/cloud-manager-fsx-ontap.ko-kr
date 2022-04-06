@@ -25,8 +25,6 @@ sidebar:
       url: "/start/concept-fsx-aws.html"
     - title: 빠른 시작
       url: "/start/task-getting-started-fsx.html"
-  - title: 요구 사항
-    entries:
     - title: ONTAP용 FSx에 대한 권한을 설정합니다
       url: "/requirements/task-setting-up-permissions-fsx.html"
     - title: ONTAP용 FSx에 대한 보안 그룹 규칙입니다
@@ -57,8 +55,6 @@ homepage:
       url: "/start/concept-fsx-aws.html"
     - title: 빠른 시작
       url: "/start/task-getting-started-fsx.html"
-  - title: 요구 사항
-    links:
     - title: ONTAP용 FSx에 대한 권한을 설정합니다
       url: "/requirements/task-setting-up-permissions-fsx.html"
     - title: ONTAP용 FSx에 대한 보안 그룹 규칙입니다
