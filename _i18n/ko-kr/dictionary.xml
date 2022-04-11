@@ -245,9 +245,7 @@
   <block id="e55bdaae79868c01c7cc36c1283eb425" category="summary">Cloud Manager는 Cloud Manager 및 FSx for ONTAP가 성공적으로 운영하는 데 필요한 인바운드 및 아웃바운드 규칙을 포함하는 AWS 보안 그룹을 생성합니다. 테스트 목적으로 또는 자체 포트를 사용해야 하는 경우 포트를 참조할 수 있습니다.</block>
   <block id="e87d6ed459b274ad7c388e0797013c9f" category="doc">ONTAP용 FSx에 대한 보안 그룹 규칙입니다</block>
   <block id="9f415057e43c73d4e37a0068a0ca9486" category="section-title">ONTAP의 FSx 규칙</block>
-  <block id="8506857e27e6280388aa5873bf48c993" category="paragraph">ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다.</block>
   <block id="1b3884b38c271fe13c8142e1355e4523" category="section-title">인바운드 규칙</block>
-  <block id="4a0ed8041426b30c39ae888d3e61bd7e" category="paragraph">미리 정의된 보안 그룹의 인바운드 규칙 소스는 0.0.0.0/0입니다.</block>
   <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">프로토콜</block>
   <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">포트</block>
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">목적</block>
@@ -301,7 +299,6 @@
   <block id="170100eb6e4338b75a2fc06f87f9e5a4" category="cell">모든 TCP</block>
   <block id="d78c51305ff97e9da7f4c5cb3d1d3453" category="cell">모든 UDP</block>
   <block id="e2f58f5baabc821fa8bdc13a96184016" category="section-title">고급 아웃바운드 규칙</block>
-  <block id="a006e2d570ede726381201e11de10d68" category="paragraph">아웃바운드 트래픽에 대해 엄격한 규칙이 필요한 경우 다음 정보를 사용하여 ONTAP용 FSx의 아웃바운드 통신에 필요한 포트만 열 수 있습니다.</block>
   <block id="d0fb2d0bd8bf6909549b5e1a987f783c" category="admonition">소스는 ONTAP 시스템용 FSx의 인터페이스(IP 주소)입니다.</block>
   <block id="c2ba7e785c49050f48da9aacc45c2b85" category="cell">서비스</block>
   <block id="f31bbdd1b3e85bccd652680e16935819" category="cell">출처</block>
@@ -331,17 +328,6 @@
   <block id="54f7d853bcd07992f133218c21a038be" category="cell">인터클러스터 LIF</block>
   <block id="55de3994e99aa970c849c53bc4429da9" category="cell">엔드포인트 백업 또는 복원</block>
   <block id="4c62d4e66380262ec50ccc7b5d1acc02" category="cell">S3로 백업 기능의 백업 및 복원 작업</block>
-  <block id="249694a485fc5d3289c38986b4f8e887" category="cell">클러스터</block>
-  <block id="c24475390eff056757a0e12aa5fe5e9f" category="cell">모든 교통 정보</block>
-  <block id="65ec67271f1ca7c8d6b82e17125410b7" category="cell">모든 LIF가 하나의 노드에 있습니다</block>
-  <block id="c0900faa4af93e0723408cba2ec46323" category="cell">다른 노드의 모든 LIF</block>
-  <block id="f484b5d85f303e1a759f409a83b3a0e8" category="cell">인터클러스터 통신(Cloud Volumes ONTAP HA에만 해당)</block>
-  <block id="e93028bdc1aacdfb3687181f2031765d" category="cell">3000입니다</block>
-  <block id="7b949d0cea1dcd058fa15d15e56dcb55" category="cell">HA 중재자</block>
-  <block id="a027048d5e4131f9799063f22513c813" category="cell">ZAPI 호출(Cloud Volumes ONTAP HA 전용)</block>
-  <block id="7d6fe0dd606232f7155fdeae2ea620a9" category="cell">ICMP</block>
-  <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1</block>
-  <block id="4cfc36b50d04aaf1a0c91d6e93be6dca" category="cell">활성 상태 유지(Cloud Volumes ONTAP HA만 해당)</block>
   <block id="54201c55d2bdc7a9e19d9e032d8c0ede" category="cell">DHCP를 선택합니다</block>
   <block id="a3f390d88e4c41f2747bfa2f1b5f87db" category="cell">68</block>
   <block id="74d297edd733ae756164d870a3d2f03f" category="cell">처음으로 설정하는 DHCP 클라이언트</block>
@@ -387,8 +373,6 @@
   <block id="096a28c32a85d3d48462b468a3700d9a" category="cell">아웃바운드 인터넷 및 ONTAP 클러스터 관리 LIF</block>
   <block id="756da060e5d58870fc2d28d4b7bc9a45" category="cell">API는 AWS 및 ONTAP를 호출하고 AutoSupport 메시지를 NetApp에 보냅니다</block>
   <block id="22043367a89ddcf3eb99eec509a967ba" category="cell">API 호출</block>
-  <block id="e9ed822bdea417e9dfd79a2c81634ba4" category="cell">ONTAP HA 중재자</block>
-  <block id="ad4167f20adb487bdfdd71a56ab00120" category="cell">ONTAP HA 중재인과의 커뮤니케이션</block>
   <block id="172ef5a94b4dd0aa120c6878fc29f70c" category="cell">8088</block>
   <block id="168342a53455f99d5b1d8d7d95e99567" category="cell">API에서 S3로 백업을 호출합니다</block>
   <block id="dd8679112f038315d04028c46da1fef7" category="cell">Cloud Manager에서 DNS Resolve에 사용됩니다</block>
@@ -466,7 +450,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
   <block id="bff0ab4dab26d38051ade7a231a2a6f2" category="sidebar">ONTAP용 FSx에 대해 자세히 알아보십시오</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">빠른 시작</block>
-  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="sidebar">요구 사항</block>
   <block id="767c313289c6f36a3348709b853c6020" category="sidebar">ONTAP에 Amazon FSx를 사용합니다</block>
   <block id="b717787f66ea65a295fc51e1e85baeb1" category="sidebar">작업 환경을 만들고 관리합니다</block>
   <block id="9be5a2eae9bab39aee7d0161c137cd43" category="sidebar">볼륨을 생성 및 마운트합니다</block>
@@ -497,4 +480,18 @@
   <block id="b2e8050cf49252f7b06bd379448c5e15" category="paragraph">Cloud Manager를 사용하여 스토리지 환경 간에 데이터를 복제할 수 있습니다. ONTAP 복제에 대해 FSx를 구성하려면 를 참조하십시오<block ref="063d7001b249d0164d3c6e7cd82a78db" category="inline-link-rx"></block>.</block>
   <block id="12fc3818f5e3f781c2bf4eb8b8d50ffc" category="paragraph">Cloud Manager에서 Cloud Sync를 사용하여 동기화 관계를 생성할 수 있습니다. 동기화 관계를 구성하려면 를 참조하십시오<block ref="3bb02b9d4fba268ff940f67f5abfe3eb" category="inline-link-rx"></block>.</block>
   <block id="9d662ce44c324aa67c253be893864c71" category="paragraph">볼륨을 추가하기 전에 ONTAP 작업 환경을 위한 Amazon FSx를 생성해야 합니다. 이 작업을 수행해야 합니다 <block ref="afb5d18769390df2b32a585a478c27d2" category="inline-link-macro-rx"></block>.</block>
+  <block id="a4f557d4dc5603464fae9d733ed96263" category="paragraph">ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다. 이 다이어그램은 ONTAP 네트워킹 구성 및 보안 그룹 요구 사항에 대한 FSx를 보여 줍니다.</block>
+  <block id="804e1541ef4556a247ad9499202fb6e2" category="inline-image-macro">ONTAP 보안 그룹 구성을 위한 FSx 다이어그램</block>
+  <block id="bca6ab005ba14ce4d09f6862e9acbd0d" category="paragraph"><block ref="bca6ab005ba14ce4d09f6862e9acbd0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="666efafa7314f1d36acc1873a7effea1" category="paragraph">AWS 관리 콘솔을 사용하여 ENIs와 연결된 보안 그룹을 찾아야 합니다.</block>
+  <block id="c92acc92060e36c3ae0a3a3122e468f4" category="list-text">AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 열고 파일 시스템 ID 링크를 클릭합니다.</block>
+  <block id="d2d5e146dd6d2c739d48382f6d5819c9" category="inline-image-macro">AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷</block>
+  <block id="cca060d5cddf22c436c0562c0973058c" category="paragraph"><block ref="cca060d5cddf22c436c0562c0973058c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5632127664c2b29ceeab7c876c04cb44" category="list-text">네트워크 및 보안* 탭에서 기본 설정 또는 대기 서브넷의 네트워크 인터페이스 ID를 클릭합니다.</block>
+  <block id="6327ad0d858ec91f26ade294f909e613" category="inline-image-macro">ONTAP ENI ID용 FSx 스크린샷</block>
+  <block id="1e4b8ac6263ef6c244c27218023baf3d" category="paragraph"><block ref="1e4b8ac6263ef6c244c27218023baf3d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ffd35e1082660bfc05812c970b3ce90c" category="list-text">네트워크 인터페이스 표에서 보안 그룹을 클릭하거나 네트워크 인터페이스의 * 세부 정보 * 섹션을 클릭합니다.</block>
+  <block id="e3771f1e1acdf77c7948d3e7e2810d3c" category="inline-image-macro">ONTAP 보안 그룹 ID용 FSx 스크린샷</block>
+  <block id="89730a660159734979b6ba72583ec695" category="paragraph"><block ref="89730a660159734979b6ba72583ec695" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5e1a521c9d06fa71faeacb00ad3819f7" category="paragraph">ONTAP용 FSx에서 중재자를 위해 또는 노드 간에 특정 포트를 열 필요가 없습니다.</block>
 </blocks>

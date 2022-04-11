@@ -19,13 +19,30 @@ Cloud Manager는 Cloud Manager 및 FSx for ONTAP가 성공적으로 운영하는
 
 == ONTAP의 FSx 규칙
 
-ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다.
+ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다. 이 다이어그램은 ONTAP 네트워킹 구성 및 보안 그룹 요구 사항에 대한 FSx를 보여 줍니다.
+
+image:diagram-fsx-security-groups.png["ONTAP 보안 그룹 구성을 위한 FSx 다이어그램"]
+
+AWS 관리 콘솔을 사용하여 ENIs와 연결된 보안 그룹을 찾아야 합니다.
+
+.단계
+. AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 열고 파일 시스템 ID 링크를 클릭합니다.
++
+image:screenshot-fsx-file-system-id.png["AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷"]
+
+. 네트워크 및 보안* 탭에서 기본 설정 또는 대기 서브넷의 네트워크 인터페이스 ID를 클릭합니다.
++
+image:screenshot-fsx-eni-id.png["ONTAP ENI ID용 FSx 스크린샷"]
+
+. 네트워크 인터페이스 표에서 보안 그룹을 클릭하거나 네트워크 인터페이스의 * 세부 정보 * 섹션을 클릭합니다.
++
+image:screenshot-fsx-security-group-id.png["ONTAP 보안 그룹 ID용 FSx 스크린샷"]
+
+
 
 
 
 === 인바운드 규칙
-
-미리 정의된 보안 그룹의 인바운드 규칙 소스는 0.0.0.0/0입니다.
 
 [cols="10,10,80"]
 |===
@@ -132,7 +149,7 @@ ONTAP용 FSx에 대해 미리 정의된 보안 그룹에는 다음과 같은 아
 
 ==== 고급 아웃바운드 규칙
 
-아웃바운드 트래픽에 대해 엄격한 규칙이 필요한 경우 다음 정보를 사용하여 ONTAP용 FSx의 아웃바운드 통신에 필요한 포트만 열 수 있습니다.
+ONTAP용 FSx에서 중재자를 위해 또는 노드 간에 특정 포트를 열 필요가 없습니다.
 
 
 NOTE: 소스는 ONTAP 시스템용 FSx의 인터페이스(IP 주소)입니다.
@@ -197,15 +214,6 @@ NOTE: 소스는 ONTAP 시스템용 FSx의 인터페이스(IP 주소)입니다.
 
 
 | S3로 백업 | TCP | 5010 | 인터클러스터 LIF | 엔드포인트 백업 또는 복원 | S3로 백업 기능의 백업 및 복원 작업 
-
-
-.3+| 클러스터 | 모든 교통 정보 | 모든 교통 정보 | 모든 LIF가 하나의 노드에 있습니다 | 다른 노드의 모든 LIF | 인터클러스터 통신(Cloud Volumes ONTAP HA에만 해당) 
-
-
-| TCP | 3000입니다 | 노드 관리 LIF | HA 중재자 | ZAPI 호출(Cloud Volumes ONTAP HA 전용) 
-
-
-| ICMP | 1 | 노드 관리 LIF | HA 중재자 | 활성 상태 유지(Cloud Volumes ONTAP HA만 해당) 
 
 
 | DHCP를 선택합니다 | UDP입니다 | 68 | 노드 관리 LIF | DHCP를 선택합니다 | 처음으로 설정하는 DHCP 클라이언트 
@@ -335,10 +343,7 @@ NOTE: 소스 IP 주소는 커넥터 호스트입니다.
 | API 호출 및 AutoSupport | HTTPS | 443 | 아웃바운드 인터넷 및 ONTAP 클러스터 관리 LIF | API는 AWS 및 ONTAP를 호출하고 AutoSupport 메시지를 NetApp에 보냅니다 
 
 
-.2+| API 호출 | TCP | 3000입니다 | ONTAP HA 중재자 | ONTAP HA 중재인과의 커뮤니케이션 
-
-
-| TCP | 8088 | S3로 백업 | API에서 S3로 백업을 호출합니다 
+| API 호출 | TCP | 8088 | S3로 백업 | API에서 S3로 백업을 호출합니다 
 
 
 | DNS | UDP입니다 | 53 | DNS | Cloud Manager에서 DNS Resolve에 사용됩니다 
