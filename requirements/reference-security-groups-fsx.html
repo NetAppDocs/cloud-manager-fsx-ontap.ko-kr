@@ -567,7 +567,7 @@
         </li>
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/ko-kr/cloud/">클라우드 문서</a>
+          <a href="https://docs.netapp.com/us-en/cloud/">클라우드 문서</a>
         </li>
         
 
@@ -605,7 +605,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-01 14:50:37 +0000">04/01/2022</time>
+    <time datetime="2022-04-11 16:06:22 +0000">04/11/2022</time>
     
   
 
@@ -623,13 +623,39 @@
 <h2 id="ontap의-fsx-규칙">ONTAP의 FSx 규칙</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다.</p>
+<p>ONTAP용 FSx 보안 그룹에는 인바운드 및 아웃바운드 규칙이 모두 필요합니다. 이 다이어그램은 ONTAP 네트워킹 구성 및 보안 그룹 요구 사항에 대한 FSx를 보여 줍니다.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../media/diagram-fsx-security-groups.png" alt="ONTAP 보안 그룹 구성을 위한 FSx 다이어그램"></span></p>
+</div>
+<div class="paragraph">
+<p>AWS 관리 콘솔을 사용하여 ENIs와 연결된 보안 그룹을 찾아야 합니다.</p>
+</div>
+<div class="olist arabic">
+<div class="title">단계</div>
+<ol class="arabic">
+<li>
+<p>AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 열고 파일 시스템 ID 링크를 클릭합니다.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-fsx-file-system-id.png" alt="AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷"></span></p>
+</div>
+</li>
+<li>
+<p>네트워크 및 보안* 탭에서 기본 설정 또는 대기 서브넷의 네트워크 인터페이스 ID를 클릭합니다.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-fsx-eni-id.png" alt="ONTAP ENI ID용 FSx 스크린샷"></span></p>
+</div>
+</li>
+<li>
+<p>네트워크 인터페이스 표에서 보안 그룹을 클릭하거나 네트워크 인터페이스의 * 세부 정보 * 섹션을 클릭합니다.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-fsx-security-group-id.png" alt="ONTAP 보안 그룹 ID용 FSx 스크린샷"></span></p>
+</div>
+</li>
+</ol>
 </div>
 <div class="sect2">
 <h3 id="인바운드-규칙">인바운드 규칙</h3>
-<div class="paragraph">
-<p>미리 정의된 보안 그룹의 인바운드 규칙 소스는 0.0.0.0/0입니다.</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -812,7 +838,7 @@
 <div class="sect3">
 <h4 id="고급-아웃바운드-규칙">고급 아웃바운드 규칙</h4>
 <div class="paragraph">
-<p>아웃바운드 트래픽에 대해 엄격한 규칙이 필요한 경우 다음 정보를 사용하여 ONTAP용 FSx의 아웃바운드 통신에 필요한 포트만 열 수 있습니다.</p>
+<p>ONTAP용 FSx에서 중재자를 위해 또는 노드 간에 특정 포트를 열 필요가 없습니다.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -980,28 +1006,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">인터클러스터 LIF</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">엔드포인트 백업 또는 복원</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">S3로 백업 기능의 백업 및 복원 작업</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="3"><p class="tableblock">클러스터</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">모든 교통 정보</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">모든 교통 정보</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">모든 LIF가 하나의 노드에 있습니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">다른 노드의 모든 LIF</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">인터클러스터 통신(Cloud Volumes ONTAP HA에만 해당)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3000입니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">노드 관리 LIF</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HA 중재자</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ZAPI 호출(Cloud Volumes ONTAP HA 전용)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ICMP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">노드 관리 LIF</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HA 중재자</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">활성 상태 유지(Cloud Volumes ONTAP HA만 해당)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DHCP를 선택합니다</p></td>
@@ -1281,13 +1285,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">API는 AWS 및 ONTAP를 호출하고 AutoSupport 메시지를 NetApp에 보냅니다</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">API 호출</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3000입니다</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP HA 중재자</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ONTAP HA 중재인과의 커뮤니케이션</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API 호출</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TCP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8088</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">S3로 백업</p></td>
