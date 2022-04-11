@@ -6,6 +6,7 @@ summary: ONTAP용 Amazon FSx는 고객이 NetApp의 ONTAP 스토리지 운영 �
 ---
 = ONTAP용 Amazon FSx에 대해 자세히 알아보십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

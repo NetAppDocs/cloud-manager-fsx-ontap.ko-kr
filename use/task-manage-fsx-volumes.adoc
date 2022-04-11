@@ -6,6 +6,7 @@ summary: Cloud Manager를 사용하여 볼륨, 클론, 스냅샷을 관리하고
 ---
 = ONTAP용 Amazon FSx의 볼륨을 관리합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

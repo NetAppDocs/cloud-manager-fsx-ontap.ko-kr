@@ -6,6 +6,7 @@ summary: ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려�
 ---
 = ONTAP용 FSx에 대한 권한을 설정합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

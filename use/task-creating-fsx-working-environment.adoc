@@ -6,6 +6,7 @@ summary: Cloud Manager를 사용하면 ONTAP 작업 환경을 위한 FSx를 생�
 ---
 = ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

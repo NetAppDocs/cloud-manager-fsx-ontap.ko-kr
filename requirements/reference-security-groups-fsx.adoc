@@ -6,6 +6,7 @@ summary: Cloud Manager는 Cloud Manager 및 FSx for ONTAP가 성공적으로 운
 ---
 = ONTAP용 FSx에 대한 보안 그룹 규칙입니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

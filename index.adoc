@@ -7,6 +7,7 @@ summary: NetApp ONTAP용 Amazon FSx는 일관된 하이브리드 클라우드 �
 ---
 = ONTAP용 Amazon FSx 문서
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

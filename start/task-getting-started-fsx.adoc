@@ -6,6 +6,7 @@ summary: 몇 가지 단계를 통해 ONTAP용 Amazon FSx를 시작해 보십시�
 ---
 = ONTAP용 Amazon FSx를 시작하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
