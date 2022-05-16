@@ -451,7 +451,6 @@
   <block id="9be5a2eae9bab39aee7d0161c137cd43" category="sidebar">볼륨을 생성 및 마운트합니다</block>
   <block id="ba96e9a97f70e26f5839a4ab40b0081b" category="sidebar">볼륨 및 데이터 서비스 관리</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
-  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="6b5b1212807dea3d5cd6a3fb67f2d1d6" category="sidebar">작업 환경을 만들고 관리합니다</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
@@ -540,4 +539,6 @@
   <block id="bece28b158ab337d9ed24b00d7d02cc7" category="list-text">NetApp 기술 지원을 위한 전화 번호를 찾으려면 * 문의하다</block>
   <block id="efe81cff8e6f47ec59ef94167b76bf5a" category="list-text">문제 열기 * 를 클릭하고 옵션 중 하나를 선택한 다음 * 보내기 * 를 클릭합니다.</block>
   <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp 담당자가 귀하의 케이스를 검토하고 곧 다시 귀하에 연락을 드릴 것입니다.</block>
+  <block id="9a11eb5da5d06e3593dc6b41553d97e5" category="sidebar">권한 설정</block>
+  <block id="390a3dfacd9551e05363b9eb09a0464c" category="sidebar">보안 그룹 규칙</block>
 </blocks>

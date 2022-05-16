@@ -49,15 +49,15 @@ homepage:
   tiles:
   - title: 시작하십시오
     links:
-    - title: 새로운 소식
+    - title: 릴리스 정보
       url: "/whats-new.html"
     - title: ONTAP용 Amazon FSx에 대해 자세히 알아보십시오
       url: "/start/concept-fsx-aws.html"
     - title: 빠른 시작
       url: "/start/task-getting-started-fsx.html"
-    - title: ONTAP용 FSx에 대한 권한을 설정합니다
+    - title: 권한 설정
       url: "/requirements/task-setting-up-permissions-fsx.html"
-    - title: ONTAP용 FSx에 대한 보안 그룹 규칙입니다
+    - title: 보안 그룹 규칙
       url: "/requirements/reference-security-groups-fsx.html"
   - title: ONTAP에 Amazon FSx를 사용합니다
     links:
@@ -81,4 +81,6 @@ homepage:
       url: https://cloud.netapp.com/blog
     - title: 클라우드 웨비나
       url: https://cloud.netapp.com/events
-product-family: {}
+product-family:
+  name: Cloud Manager
+  repo: cloud-manager-family
