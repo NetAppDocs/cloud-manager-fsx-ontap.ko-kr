@@ -250,10 +250,8 @@
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="cell">인스턴스에 Ping을 수행 중입니다</block>
   <block id="293c9ea246ff9985dc6f62a650f78986" category="cell">HTTP</block>
   <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
-  <block id="ababfee3bb5ff05f9b0368cea51ee877" category="cell">클러스터 관리 LIF의 IP 주소를 사용하여 System Manager 웹 콘솔에 대한 HTTP 액세스</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="cell">HTTPS</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
-  <block id="292d4f8112774cc3427c6a7da0cce58b" category="cell">클러스터 관리 LIF의 IP 주소를 사용하여 System Manager 웹 콘솔에 대한 HTTPS 액세스</block>
   <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH를 클릭합니다</block>
   <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
   <block id="68e68bb8029eb3e7ed079fea7b679d99" category="cell">클러스터 관리 LIF 또는 노드 관리 LIF의 IP 주소에 SSH를 액세스할 수 있습니다</block>
@@ -542,4 +540,5 @@
   <block id="9a11eb5da5d06e3593dc6b41553d97e5" category="sidebar">권한 설정</block>
   <block id="390a3dfacd9551e05363b9eb09a0464c" category="sidebar">보안 그룹 규칙</block>
   <block id="5e89288adba0036bb013893540161d9f" category="list-text">현재 ONTAP용 FSx의 SnapMirror 복제는 CLI를 사용하여 지원됩니다.</block>
+  <block id="1960d6022dcb5a2b9a687d1f6cbd8931" category="cell">Connector에서 fsxadmin 관리 LIF로 액세스하여 FSx로 API 호출을 전송합니다</block>
 </blocks>

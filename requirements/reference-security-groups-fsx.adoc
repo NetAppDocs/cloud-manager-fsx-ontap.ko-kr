@@ -53,10 +53,7 @@ image:screenshot-fsx-security-group-id.png["ONTAP 보안 그룹 ID용 FSx 스크
 | 모든 ICMP | 모두 | 인스턴스에 Ping을 수행 중입니다 
 
 
-| HTTP | 80 | 클러스터 관리 LIF의 IP 주소를 사용하여 System Manager 웹 콘솔에 대한 HTTP 액세스 
-
-
-| HTTPS | 443 | 클러스터 관리 LIF의 IP 주소를 사용하여 System Manager 웹 콘솔에 대한 HTTPS 액세스 
+| HTTPS | 443 | Connector에서 fsxadmin 관리 LIF로 액세스하여 FSx로 API 호출을 전송합니다 
 
 
 | SSH를 클릭합니다 | 22 | 클러스터 관리 LIF 또는 노드 관리 LIF의 IP 주소에 SSH를 액세스할 수 있습니다 
