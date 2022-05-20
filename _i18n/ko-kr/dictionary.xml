@@ -539,6 +539,7 @@
   <block id="cbb1040836732e478409dacf7e45171a" category="paragraph">NetApp 담당자가 귀하의 케이스를 검토하고 곧 다시 귀하에 연락을 드릴 것입니다.</block>
   <block id="9a11eb5da5d06e3593dc6b41553d97e5" category="sidebar">권한 설정</block>
   <block id="390a3dfacd9551e05363b9eb09a0464c" category="sidebar">보안 그룹 규칙</block>
-  <block id="5e89288adba0036bb013893540161d9f" category="list-text">현재 ONTAP용 FSx의 SnapMirror 복제는 CLI를 사용하여 지원됩니다.</block>
   <block id="1960d6022dcb5a2b9a687d1f6cbd8931" category="cell">Connector에서 fsxadmin 관리 LIF로 액세스하여 FSx로 API 호출을 전송합니다</block>
+  <block id="63b0ed0469bbbea547bdb73446ef6e8f" category="inline-link-macro">ONTAP CLI를 사용하여 지원됩니다</block>
+  <block id="8e134e23e64a574b08ee8f4a104b33a7" category="list-text">현재 ONTAP용 FSx의 SnapMirror 복제는 입니다 <block ref="cab6d77018231492052744a391f5eb40" category="inline-link-macro-rx"></block>.</block>
 </blocks>
