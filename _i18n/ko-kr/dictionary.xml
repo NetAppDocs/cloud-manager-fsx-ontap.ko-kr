@@ -479,13 +479,10 @@
   <block id="666efafa7314f1d36acc1873a7effea1" category="paragraph">AWS 관리 콘솔을 사용하여 ENIs와 연결된 보안 그룹을 찾아야 합니다.</block>
   <block id="c92acc92060e36c3ae0a3a3122e468f4" category="list-text">AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 열고 파일 시스템 ID 링크를 클릭합니다.</block>
   <block id="d2d5e146dd6d2c739d48382f6d5819c9" category="inline-image-macro">AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷</block>
-  <block id="cca060d5cddf22c436c0562c0973058c" category="paragraph"><block ref="cca060d5cddf22c436c0562c0973058c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5632127664c2b29ceeab7c876c04cb44" category="list-text">네트워크 및 보안* 탭에서 기본 설정 또는 대기 서브넷의 네트워크 인터페이스 ID를 클릭합니다.</block>
   <block id="6327ad0d858ec91f26ade294f909e613" category="inline-image-macro">ONTAP ENI ID용 FSx 스크린샷</block>
-  <block id="1e4b8ac6263ef6c244c27218023baf3d" category="paragraph"><block ref="1e4b8ac6263ef6c244c27218023baf3d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ffd35e1082660bfc05812c970b3ce90c" category="list-text">네트워크 인터페이스 표에서 보안 그룹을 클릭하거나 네트워크 인터페이스의 * 세부 정보 * 섹션을 클릭합니다.</block>
   <block id="e3771f1e1acdf77c7948d3e7e2810d3c" category="inline-image-macro">ONTAP 보안 그룹 ID용 FSx 스크린샷</block>
-  <block id="89730a660159734979b6ba72583ec695" category="paragraph"><block ref="89730a660159734979b6ba72583ec695" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5e1a521c9d06fa71faeacb00ad3819f7" category="paragraph">ONTAP용 FSx에서 중재자를 위해 또는 노드 간에 특정 포트를 열 필요가 없습니다.</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
@@ -542,4 +539,7 @@
   <block id="1960d6022dcb5a2b9a687d1f6cbd8931" category="cell">Connector에서 fsxadmin 관리 LIF로 액세스하여 FSx로 API 호출을 전송합니다</block>
   <block id="63b0ed0469bbbea547bdb73446ef6e8f" category="inline-link-macro">ONTAP CLI를 사용하여 지원됩니다</block>
   <block id="8e134e23e64a574b08ee8f4a104b33a7" category="list-text">현재 ONTAP용 FSx의 SnapMirror 복제는 입니다 <block ref="cab6d77018231492052744a391f5eb40" category="inline-link-macro-rx"></block>.</block>
+  <block id="74925aadd53e4f7b65df21759c37451d" category="paragraph"><block ref="74925aadd53e4f7b65df21759c37451d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f737b6b92ce7095e05c485d6d1b3acfe" category="paragraph"><block ref="f737b6b92ce7095e05c485d6d1b3acfe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="29608e98541844ed43ec551876108d97" category="paragraph"><block ref="29608e98541844ed43ec551876108d97" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

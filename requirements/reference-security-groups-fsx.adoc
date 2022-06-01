@@ -29,15 +29,15 @@ AWS 관리 콘솔을 사용하여 ENIs와 연결된 보안 그룹을 찾아야 �
 .단계
 . AWS 관리 콘솔에서 ONTAP용 FSx 파일 시스템을 열고 파일 시스템 ID 링크를 클릭합니다.
 +
-image:screenshot-fsx-file-system-id.png["AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷"]
+image:screenshot-fsx-file-system-id-zoom.png["AWS 관리 콘솔의 FSx 파일 시스템 ID 스크린샷"]
 
 . 네트워크 및 보안* 탭에서 기본 설정 또는 대기 서브넷의 네트워크 인터페이스 ID를 클릭합니다.
 +
-image:screenshot-fsx-eni-id.png["ONTAP ENI ID용 FSx 스크린샷"]
+image:screenshot-fsx-eni-id-zoom.png["ONTAP ENI ID용 FSx 스크린샷"]
 
 . 네트워크 인터페이스 표에서 보안 그룹을 클릭하거나 네트워크 인터페이스의 * 세부 정보 * 섹션을 클릭합니다.
 +
-image:screenshot-fsx-security-group-id.png["ONTAP 보안 그룹 ID용 FSx 스크린샷"]
+image:screenshot-fsx-security-group-id-zoom.png["ONTAP 보안 그룹 ID용 FSx 스크린샷"]
 
 
 
