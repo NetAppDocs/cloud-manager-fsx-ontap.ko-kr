@@ -12,9 +12,8 @@ sidebar:
   product-family:
     name: Cloud Manager
     repo: cloud-manager-family
+    sidebar_label: All Cloud Manager documentation
   entries:
-  - title: 모든 Cloud Manager 설명서
-    url: https://docs.netapp.com/us-en/cloud-manager-family
   - title: ONTAP용 Amazon FSx 문서
     url: "/index.html"
   - title: 릴리스 정보
