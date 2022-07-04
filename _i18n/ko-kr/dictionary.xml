@@ -129,11 +129,9 @@
   <block id="d0b2e405325c02e50ba6ff1e7a0bfdeb" category="inline-image-macro">ONTAP용 FSx에 대한 자격 증명을 추가하는 스크린샷</block>
   <block id="0c59eb935a218de10968d2478d3839c5" category="paragraph"><block ref="0c59eb935a218de10968d2478d3839c5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="282e8cadc54623677e7bc13447fcac29" category="list-text">지역 및 VPC 정보 제공:</block>
-  <block id="f71590c4106e9e8e85fb4072cc1b8408" category="list-text">각 노드가 전용 가용성 영역에 있도록 적어도 두 개의 가용성 영역에 서브넷이 있는 영역 및 VPC를 선택합니다.</block>
   <block id="d234e32cc579256f2dc2b1c0f46bf8ed" category="inline-link-macro">AWS 보안 그룹</block>
   <block id="c0a56d37b9a744bb980fb63714ff853a" category="inline-link-macro">AWS의 탄력적인 네트워크 인터페이스(ENI)</block>
   <block id="70f807aec183b4123fd9e27691b549ae" category="list-text">기본 보안 그룹을 수락하거나 다른 보안 그룹을 선택합니다. <block ref="35ef09e7b222c17f67a4a66af73d7196" category="inline-link-macro-rx"></block> 인바운드 및 아웃바운드 트래픽을 제어합니다. 이러한 항목은 AWS 관리자가 구성하며 에 연결됩니다 <block ref="122c50f10f9ced3dc765944ec92b3531" category="inline-link-macro-rx"></block>.</block>
-  <block id="8e21376ec8ebc45640c4648d1ea694e4" category="list-text">각 노드에 대한 가용성 영역 및 서브넷을 선택합니다.</block>
   <block id="02b7327efc840726659c50bf482440ba" category="inline-image-macro">ONTAP용 FSx에 대한 영역 및 VPC 추가 스크린샷</block>
   <block id="e856b8b85c22d45ac9df09b76538baf0" category="paragraph"><block ref="e856b8b85c22d45ac9df09b76538baf0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8acea1c4fcca87631ca127e2bc757f13" category="inline-link">AWS Transit Gateway를 참조하십시오</block>
@@ -377,12 +375,10 @@
   <block id="8fad3d94a3385eeb6406613f49896cdd" category="doc">ONTAP용 FSx에 대한 권한을 설정합니다</block>
   <block id="b84143bbdad7df35ec2c66cf2071f420" category="paragraph">ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려면 Cloud Manager에 ONTAP 작업 환경을 위한 FSx를 생성하는 데 필요한 권한을 제공하는 IAM 역할의 ARN을 제공하여 AWS 자격 증명을 Cloud Manager에 추가해야 합니다.</block>
   <block id="d8a56d983b91f097e5ba55dd03a18509" category="section-title">IAM 역할을 설정합니다</block>
-  <block id="d9a499196547b3d025fe2a7d3c56baa1" category="paragraph">Cloud Manager SaaS가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.</block>
   <block id="44030f19e52b4a03b050525f287bbc15" category="list-text">대상 계정에서 IAM 콘솔로 이동합니다.</block>
   <block id="7f4640b00b5df83a54d4aaaa51f7d6ab" category="list-text">액세스 관리에서 * 역할 &gt; 역할 만들기 * 를 클릭하고 단계를 따라 역할을 만듭니다.</block>
   <block id="e1a3d580d5cb42904b96dc05c0e0903d" category="paragraph">다음을 수행하십시오.</block>
   <block id="e506de832b98c2693eb3f400ef0722c0" category="list-text">신뢰할 수 있는 엔터티 유형 * 에서 * AWS 계정 * 을 선택합니다.</block>
-  <block id="7d85138efc851d16b36fe016a7d406df" category="list-text">다른 AWS 계정 * 을 선택하고 Cloud Manager SaaS:952013314444의 ID를 입력합니다</block>
   <block id="30c558b7179a7e55ad7f3ae5ca262466" category="list-text">다음 권한이 포함된 정책을 만듭니다.</block>
   <block id="e08f06cebc90d5cc269f643f2df5ab95" category="list-text">다음 단계에서 Cloud Manager에 붙여넣을 수 있도록 IAM 역할의 역할 ARN을 복사합니다.</block>
   <block id="d47c23803528fa45fad33a3f83dfcf54" category="paragraph">이제 IAM 역할에 필요한 권한이 있습니다.</block>
@@ -438,7 +434,6 @@
   <block id="c8f9fcb2d5c182f76e53507a00efe037" category="inline-link">Linux 호스트에 Connector 소프트웨어 설치</block>
   <block id="80ff3e3b4817bcd801ad60d27676fed7" category="summary">NetApp ONTAP용 Amazon FSx는 일관된 하이브리드 클라우드 경험을 제공하는 네이티브 AWS 관리 서비스에 ONTAP의 모든 기능을 제공합니다. 이 문서에서는 NetApp Cloud Manager를 사용하여 ONTAP용 FSx를 관리하는 방법에 대해 설명합니다.</block>
   <block id="e7d8c0779e86c7c2edb0791a45906d17" category="doc">ONTAP용 Amazon FSx 문서</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
   <block id="69f7f21f4fc680b59f6e889bf9547523" category="sidebar">ONTAP용 Amazon FSx 문서</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
@@ -542,4 +537,25 @@
   <block id="74925aadd53e4f7b65df21759c37451d" category="paragraph"><block ref="74925aadd53e4f7b65df21759c37451d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f737b6b92ce7095e05c485d6d1b3acfe" category="paragraph"><block ref="f737b6b92ce7095e05c485d6d1b3acfe" category="inline-image-macro-rx" type="image"></block></block>
   <block id="29608e98541844ed43ec551876108d97" category="paragraph"><block ref="29608e98541844ed43ec551876108d97" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1511b856d0328cfba458b8f83c2e94e3" category="section-title">2022년 7월 3일</block>
+  <block id="f0e3a414b681f7ab90a3f742f40c9365" category="list-text">이제 단일 또는 다중 가용성 영역 HA 배포 모델을 선택할 수 있습니다.</block>
+  <block id="324197c492971b6abe6108b6ed0e2722" category="inline-link-macro">ONTAP 작업 환경을 위한 FSx를 생성합니다</block>
+  <block id="28d4a8073a683a018eec6bfdec63098f" category="paragraph"><block ref="28d4a8073a683a018eec6bfdec63098f" category="inline-link-macro-rx"></block></block>
+  <block id="1d83e69fc7f9ed326713517b984b155b" category="list-text">Cloud Manager에서 AWS GovCloud 계정 인증이 지원됩니다.</block>
+  <block id="9c2f60af941e19d70429b4a59debeeb9" category="paragraph"><block ref="9c2f60af941e19d70429b4a59debeeb9" category="inline-link-macro-rx"></block></block>
+  <block id="f84135b2c550b8d738093a4346ac024d" category="list-text">단일 가용성 영역 * 또는 * 다중 가용성 영역 * HA 배포 모델을 선택합니다.</block>
+  <block id="2be7f08200a1fe8660c0e3b215446b33" category="inline-image-macro">단일 또는 다중 가용성 영역 배포 모델의 선택 라디오 단추 스크린샷</block>
+  <block id="501a818c591eeaa056b0d623f83dba40" category="paragraph"><block ref="501a818c591eeaa056b0d623f83dba40" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="604034876d198af3f8d6cece2f09d984" category="list-text">지역 및 VPC를 선택합니다.</block>
+  <block id="d7387928ac1cfa971f35a613cd81907c" category="paragraph">여러 가용성 영역의 경우 각 노드가 전용 가용성 영역에 있도록 두 개 이상의 가용성 영역에서 서브넷을 선택합니다.</block>
+  <block id="32d764103d092c07b147433d048bb586" category="paragraph">Cloud Manager가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.</block>
+  <block id="97b63fa093616f832ba5318ba00447ce" category="list-text">다른 AWS 계정 * 을 선택하고 Cloud Manager의 ID를 입력합니다.</block>
+  <block id="81d51fac54904448b89f95abe2f40178" category="list-text">Cloud Manager SaaS의 경우: 952013314444</block>
+  <block id="68955c28b96907f1d1f5783fd01de32e" category="list-text">AWS GovCloud(US):</block>
+  <block id="4aaa495471a5ae62d8384762205bf782" category="inline-link-macro">Cloud Manager 정책 페이지</block>
+  <block id="c8a9420eac272cc5ace307e15c1a05cc" category="paragraph">에서 Connector 배포 정책을 봅니다 <block ref="890ffa37b9e517890ec4308e2dc353ce" category="inline-link-macro-rx"></block>.</block>
+  <block id="a7cf2ac8ff4dd10d1e304f0abd7fe0bd" category="list-text">AWS GovCloud(US) 계정을 사용하는 경우, * AWS GovCloud(US) 계정을 사용하고 있는지 확인하십시오 *.</block>
+  <block id="045e30d9d567e729274d9202eee4ff62" category="inline-image-macro">GovCloud(US) 계정 확인란 스크린샷</block>
+  <block id="c03a6ecd27b7a5ea40ee52d99c7a247a" category="paragraph"><block ref="c03a6ecd27b7a5ea40ee52d99c7a247a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9891de406800116bd9cb8226be9beb9" category="list-text">AWS GovCloud를 사용하여 인증하면 SaaS 플랫폼이 비활성화됩니다. 이는 계정에 대한 영구적인 변경이며 실행 취소할 수 없습니다.</block>
 </blocks>

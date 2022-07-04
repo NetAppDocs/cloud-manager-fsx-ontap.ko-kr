@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: requirements/task-setting-up-permissions-fsx.html 
-keywords: fsx for ontap, iam, user role, permissions 
+keywords: fsx for ontap, iam, user role, permissions, aws govcloud, govcloud, credentials 
 summary: ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려면 ONTAP용 FSx 권한이 있는 IAM 사용자 역할에 대한 AWS 액세스 키 및 암호 키가 있어야 합니다. 
 ---
 = ONTAP용 FSx에 대한 권한을 설정합니다
@@ -20,7 +20,7 @@ ONTAP 작업 환경을 위한 Amazon FSx를 생성 또는 관리하려면 Cloud 
 
 == IAM 역할을 설정합니다
 
-Cloud Manager SaaS가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.
+Cloud Manager가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.
 
 .단계
 . 대상 계정에서 IAM 콘솔로 이동합니다.
@@ -30,7 +30,12 @@ Cloud Manager SaaS가 역할을 맡을 수 있도록 IAM 역할을 설정합니�
 
 +
 ** 신뢰할 수 있는 엔터티 유형 * 에서 * AWS 계정 * 을 선택합니다.
-** 다른 AWS 계정 * 을 선택하고 Cloud Manager SaaS:952013314444의 ID를 입력합니다
+** 다른 AWS 계정 * 을 선택하고 Cloud Manager의 ID를 입력합니다.
++
+*** Cloud Manager SaaS의 경우: 952013314444
+*** AWS GovCloud(US):
+
+
 ** 다음 권한이 포함된 정책을 만듭니다.
 +
 [source, json]
@@ -54,6 +59,9 @@ Cloud Manager SaaS가 역할을 맡을 수 있도록 IAM 역할을 설정합니�
     ]
 }
 ----
++
+에서 Connector 배포 정책을 봅니다 link:https://mysupport.netapp.com/site/info/cloud-manager-policies["Cloud Manager 정책 페이지"].
+
 
 
 . 다음 단계에서 Cloud Manager에 붙여넣을 수 있도록 IAM 역할의 역할 ARN을 복사합니다.
@@ -78,6 +86,17 @@ image:screenshot_settings_icon.gif["Cloud Manager 콘솔의 오른쪽 위에 설
 +
 .. * 자격 증명 위치 *: * Amazon Web Services > Cloud Manager * 를 선택합니다.
 .. * 자격 증명 정의 *: IAM 역할의 ARN(Amazon Resource Name)을 제공합니다.
++
+[NOTE]
+====
+*** AWS GovCloud(US) 계정을 사용하는 경우, * AWS GovCloud(US) 계정을 사용하고 있는지 확인하십시오 *.
++
+image:screenshot-govcloud-checkbox.png["GovCloud(US) 계정 확인란 스크린샷"]
+
+*** AWS GovCloud를 사용하여 인증하면 SaaS 플랫폼이 비활성화됩니다. 이는 계정에 대한 영구적인 변경이며 실행 취소할 수 없습니다.
+
+
+====
 .. * 검토 *: 새 자격 증명에 대한 세부 정보를 확인하고 * 추가 * 를 클릭합니다.
 
 

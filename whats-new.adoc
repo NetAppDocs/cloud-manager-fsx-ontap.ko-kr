@@ -18,6 +18,20 @@ ONTAP용 Amazon FSx의 새로운 기능에 대해 알아보십시오.
 
 
 
+== 2022년 7월 3일
+
+* 이제 단일 또는 다중 가용성 영역 HA 배포 모델을 선택할 수 있습니다.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment["ONTAP 작업 환경을 위한 FSx를 생성합니다"]
+
+* Cloud Manager에서 AWS GovCloud 계정 인증이 지원됩니다.
++
+link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html#set-up-the-iam-role["IAM 역할을 설정합니다"]
+
+
+
+
+
 == 2022년 2월 27일
 
 

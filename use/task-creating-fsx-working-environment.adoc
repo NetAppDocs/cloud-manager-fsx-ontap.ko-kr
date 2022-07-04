@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/task-creating-fsx-working-environment.html 
-keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment 
+keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones 
 summary: Cloud Manager를 사용하면 ONTAP 작업 환경을 위한 FSx를 생성하여 볼륨을 추가하고 추가 데이터 서비스를 관리할 수 있습니다. 
 ---
 = ONTAP 작업 환경을 위한 Amazon FSx를 생성하고 관리합니다
@@ -60,13 +60,21 @@ image:screenshot_add_fsx_credentials.png["ONTAP용 FSx에 대한 자격 증명�
 
 . 지역 및 VPC 정보 제공:
 +
-.. 각 노드가 전용 가용성 영역에 있도록 적어도 두 개의 가용성 영역에 서브넷이 있는 영역 및 VPC를 선택합니다.
-.. 기본 보안 그룹을 수락하거나 다른 보안 그룹을 선택합니다. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["AWS 보안 그룹"^] 인바운드 및 아웃바운드 트래픽을 제어합니다. 이러한 항목은 AWS 관리자가 구성하며 에 연결됩니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["AWS의 탄력적인 네트워크 인터페이스(ENI)"^].
-.. 각 노드에 대한 가용성 영역 및 서브넷을 선택합니다.
-.. 다음 * 을 클릭합니다.
+.. 단일 가용성 영역 * 또는 * 다중 가용성 영역 * HA 배포 모델을 선택합니다.
 +
+image:screenshot-ha-deployment-models.png["단일 또는 다중 가용성 영역 배포 모델의 선택 라디오 단추 스크린샷"]
+
+.. 지역 및 VPC를 선택합니다.
++
+[NOTE]
+====
+여러 가용성 영역의 경우 각 노드가 전용 가용성 영역에 있도록 두 개 이상의 가용성 영역에서 서브넷을 선택합니다.
+
 image:screenshot_add_fsx_region.png["ONTAP용 FSx에 대한 영역 및 VPC 추가 스크린샷"]
 
+====
+.. 기본 보안 그룹을 수락하거나 다른 보안 그룹을 선택합니다. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html["AWS 보안 그룹"^] 인바운드 및 아웃바운드 트래픽을 제어합니다. 이러한 항목은 AWS 관리자가 구성하며 에 연결됩니다 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["AWS의 탄력적인 네트워크 인터페이스(ENI)"^].
+.. 다음 * 을 클릭합니다.
 
 
 . CIDR Range_Empty를 그대로 두고 * Next * 를 클릭하여 사용 가능한 범위를 자동으로 설정합니다. 선택적으로 를 사용할 수 있습니다 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html["AWS Transit Gateway를 참조하십시오"^] 범위를 수동으로 구성합니다.
@@ -124,13 +132,12 @@ image:screenshot_fsx_working_environment_discover.png["ONTAP용 Amazon FSx의 �
 
 . 기존 자격 증명을 선택하거나 새 자격 증명을 생성합니다. 다음 * 을 클릭합니다.
 . 추가할 AWS 지역과 작업 환경을 선택합니다.
-+
-image:screenshot_fsx_working_environment_select.png["AWS 지역 및 작업 환경 선택 스크린샷"]
-
 . 추가 * 를 클릭합니다.
 
 
 ONTAP 파일 시스템에 대해 검색된 FSx가 클라우드 관리자에 표시됩니다.
+
+image:screenshot_fsx_working_environment_select.png["AWS 지역 및 작업 환경 선택 스크린샷"]
 
 
 
