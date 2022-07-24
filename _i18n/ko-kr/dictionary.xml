@@ -551,11 +551,11 @@
   <block id="32d764103d092c07b147433d048bb586" category="paragraph">Cloud Manager가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.</block>
   <block id="97b63fa093616f832ba5318ba00447ce" category="list-text">다른 AWS 계정 * 을 선택하고 Cloud Manager의 ID를 입력합니다.</block>
   <block id="81d51fac54904448b89f95abe2f40178" category="list-text">Cloud Manager SaaS의 경우: 952013314444</block>
-  <block id="68955c28b96907f1d1f5783fd01de32e" category="list-text">AWS GovCloud(US):</block>
   <block id="4aaa495471a5ae62d8384762205bf782" category="inline-link-macro">Cloud Manager 정책 페이지</block>
   <block id="c8a9420eac272cc5ace307e15c1a05cc" category="paragraph">에서 Connector 배포 정책을 봅니다 <block ref="890ffa37b9e517890ec4308e2dc353ce" category="inline-link-macro-rx"></block>.</block>
   <block id="a7cf2ac8ff4dd10d1e304f0abd7fe0bd" category="list-text">AWS GovCloud(US) 계정을 사용하는 경우, * AWS GovCloud(US) 계정을 사용하고 있는지 확인하십시오 *.</block>
   <block id="045e30d9d567e729274d9202eee4ff62" category="inline-image-macro">GovCloud(US) 계정 확인란 스크린샷</block>
   <block id="c03a6ecd27b7a5ea40ee52d99c7a247a" category="paragraph"><block ref="c03a6ecd27b7a5ea40ee52d99c7a247a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a9891de406800116bd9cb8226be9beb9" category="list-text">AWS GovCloud를 사용하여 인증하면 SaaS 플랫폼이 비활성화됩니다. 이는 계정에 대한 영구적인 변경이며 실행 취소할 수 없습니다.</block>
+  <block id="319c3fdfa37c6b0ae4e91a351706489b" category="list-text">AWS GovCloud(미국): 033442085313</block>
 </blocks>

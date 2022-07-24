@@ -33,7 +33,7 @@ Cloud Manager가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.
 ** 다른 AWS 계정 * 을 선택하고 Cloud Manager의 ID를 입력합니다.
 +
 *** Cloud Manager SaaS의 경우: 952013314444
-*** AWS GovCloud(US):
+*** AWS GovCloud(미국): 033442085313
 
 
 ** 다음 권한이 포함된 정책을 만듭니다.
@@ -52,6 +52,7 @@ Cloud Manager가 역할을 맡을 수 있도록 IAM 역할을 설정합니다.
                 "ec2:CreateTags",
                 "kms:Describe*",
                 "kms:List*",
+                "kms:CreateGrant",
                 "iam:CreateServiceLinkedRole"
             ],
             "Resource": "*"
